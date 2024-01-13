@@ -1,8 +1,7 @@
 <template>
   <div class="container" v-on:click="goToArticle">
-    <p class="score">{{ reviewScore }}</p>
     <div class="text">
-      <h1 class="name">{{ reviewerName }}</h1>
+      <h1 class="name">{{ paperTitle }}</h1>
       <p>{{ text }}</p>
     </div>
   </div>
@@ -11,8 +10,7 @@
 <script>
 export default {
   props: {
-    reviewerName: String,
-    reviewScore: Number,
+    paperTitle: String,
     text: String,
     url: String,
   },
