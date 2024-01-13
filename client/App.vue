@@ -94,7 +94,6 @@ h1 {
 
 img {
   height: 2em;
-  z-index: -99999;
 }
 
 a {
