@@ -1,7 +1,7 @@
 <template>
   <div class="search-result-container" v-on:click="routerDestination">
     <span>{{ year }}</span>
-    <h1>{{ title }}</h1>
+    <h3>{{ title }}</h3>
   </div>
 </template>
 
@@ -30,5 +30,7 @@ export default {
   cursor: pointer;
   width: 100%;
   border: 1px solid grey;
+  text-align: left;
+  padding: 5px;
 }
 </style>

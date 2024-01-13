@@ -3,7 +3,7 @@ import SearchResult from "./SearchResult.vue";
 </script>
 <template>
   <div class="search-container">
-    <h2>WHAT DOES THE WORLD THINK?</h2>
+    <h1>WHAT DOES THE WORLD THINK?</h1>
     <div class="search-box">
       <input type="text" v-model="searchQuery" @input="onSearch" placeholder="Search..." />
       <button>
@@ -35,7 +35,6 @@ export default {
             console.log("response not ok");
           }
           let body = await response.json();
-          console.log(body);
           this.items = body.matches;
         } catch (error) {
           console.log("received an error of", error);
@@ -103,7 +102,7 @@ button {
   padding: 50px;
 }
 .results {
-  max-height: 75vh;
+  max-height: 60vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
