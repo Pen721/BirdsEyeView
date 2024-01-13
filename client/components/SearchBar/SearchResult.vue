@@ -14,7 +14,8 @@ export default {
   },
   methods: {
     routerDestination() {
-      this.$router.push({ name: "papers", params: { id: this.id } });
+      this.$router.push({ path: `/papers/${this.id}` });
+      //   this.$router.push({ name: "papers", params: { id: this.id } });
     },
   },
 };
