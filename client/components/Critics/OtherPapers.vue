@@ -1,7 +1,7 @@
 <template>
   <div class="container" v-on:click="goToArticle">
     <div class="text">
-      <h1 class="nameOtherPapers">{{ paperTitle }}</h1>
+      <h3 class="nameOtherPapers">{{ paperTitle }}</h3>
       <p class="textOtherPapers">{{ text }}</p>
     </div>
   </div>

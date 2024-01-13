@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h1>{{ username }}</h1>
-    <h1>{{ views }}</h1>
+    <h3>{{ username }}</h3>
+    <h3>{{ views }}</h3>
     <span>{{ text }}</span>
     <span>{{ url }}</span>
   </div>

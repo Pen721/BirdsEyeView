@@ -2,7 +2,7 @@
   <div class="container" v-on:click="goToArticle">
     <p class="score">{{ reviewScore }}</p>
     <div class="text">
-      <h1 class="name">{{ reviewerName }}</h1>
+      <h3 class="name">{{ reviewerName }}</h3>
       <p class="text">{{ text }}</p>
     </div>
   </div>
