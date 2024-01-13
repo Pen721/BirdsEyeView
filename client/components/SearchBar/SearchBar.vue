@@ -1,12 +1,17 @@
+<script setup>
+import SearchResult from "./SearchResult.vue";
+</script>
 <template>
-  <div>
-    <input type="text" v-model="searchQuery" @input="onSearch" placeholder="Search..." />
-    <ul>
-      <li v-for="item in items" :key="item.id">
-        {{ item.authorsYear }}
-        {{ item.title }}
-      </li>
-    </ul>
+  <div class="search-container">
+    <h2>WHAT DOES THE WORLD THINK?</h2>
+    <div class="search-box">
+      <input type="text" v-model="searchQuery" @input="onSearch" placeholder="Search..." />
+      <button>
+        <img src="@/assets/images/serach.png" />
+      </button>
+    </div>
+
+    <SearchResult v-for="item in items" :key="item.id" :title="item.title" :year="item.year" />
   </div>
 </template>
 
@@ -40,3 +45,57 @@ export default {
   },
 };
 </script>
+<style scoped>
+* {
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.search-container {
+  text-align: center;
+}
+
+.search-box {
+  position: relative;
+  margin: auto;
+  max-width: 50vw; /* Adjust as necessary */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 20px;
+  /* Make room for the search icon */
+  border: 1px solid #ccc;
+  border-radius: 50px; /* Rounded borders */
+  font-size: 16px; /* Adjust as necessary */
+  box-sizing: border-box;
+}
+
+button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.search-icon {
+  /* Use a real icon or adjust this to your preference */
+  font-size: 20px; /* Adjust as necessary */
+}
+img {
+  width: 100%;
+  height: 100%;
+  margin-top: 2px;
+}
+button {
+  padding: 50px;
+}
+</style>
