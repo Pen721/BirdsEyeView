@@ -11,7 +11,7 @@ import SearchResult from "./SearchResult.vue";
       </button>
     </div>
 
-    <SearchResult v-for="item in items" :key="item.id" :title="item.title" :year="item.year" />
+    <SearchResult v-for="item in items" :key="item.id" :title="item.title" :year="item.authorsYear" />
   </div>
 </template>
 
@@ -52,7 +52,9 @@ export default {
   font-style: normal;
 }
 .search-container {
+  margin: 0 auto;
   text-align: center;
+  max-width: 50vw;
 }
 
 .search-box {
