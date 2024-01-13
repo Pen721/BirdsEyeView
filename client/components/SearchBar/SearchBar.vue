@@ -12,7 +12,7 @@ import SearchResult from "./SearchResult.vue";
     </div>
 
     <div class="results">
-      <SearchResult v-for="item in items" :key="item.id" :title="item.title" :year="item.authorsYear" />
+      <SearchResult v-for="item in items" :key="item.id" :title="item.title" :year="item.authorsYear" :id="item.id" />
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="search-result-container">
+  <div class="search-result-container" v-on:click="routerDestination">
     <span>{{ year }}</span>
     <h1>{{ title }}</h1>
   </div>
@@ -10,6 +10,12 @@ export default {
   props: {
     title: String,
     year: String,
+    id: String,
+  },
+  methods: {
+    routerDestination() {
+      this.$router.push({ name: "papers", params: { id: this.id } });
+    },
   },
 };
 </script>
