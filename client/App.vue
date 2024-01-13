@@ -51,11 +51,6 @@ onBeforeMount(async () => {
 
 
   <RouterView />
-
-
-
-
-
 <!--Waves Container-->
   <div>
   <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -72,7 +67,6 @@ onBeforeMount(async () => {
   </div>
 
 </div>
-
 </template>
 
 <style scoped>
@@ -100,6 +94,7 @@ h1 {
 
 img {
   height: 2em;
+  z-index: -99999;
 }
 
 a {

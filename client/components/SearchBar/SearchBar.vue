@@ -11,7 +11,9 @@ import SearchResult from "./SearchResult.vue";
       </button>
     </div>
 
-    <SearchResult v-for="item in items" :key="item.id" :title="item.title" :year="item.year" />
+    <div class="results">
+      <SearchResult v-for="item in items" :key="item.id" :title="item.title" :year="item.authorsYear" />
+    </div>
   </div>
 </template>
 
@@ -52,7 +54,9 @@ export default {
   font-style: normal;
 }
 .search-container {
+  margin: 0 auto;
   text-align: center;
+  max-width: 50vw;
 }
 
 .search-box {
@@ -97,5 +101,10 @@ img {
 }
 button {
   padding: 50px;
+}
+.results {
+  max-height: 75vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 </style>
