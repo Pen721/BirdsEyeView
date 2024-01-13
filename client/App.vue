@@ -60,6 +60,9 @@ nav {
 }
 
 h1 {
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 200;
+  font-style: normal;
   font-size: 2em;
   margin: 0;
 }
@@ -75,7 +78,9 @@ img {
 }
 
 a {
-  font-size: large;
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 20;
+  font-style: normal;
   color: black;
   text-decoration: none;
 }
