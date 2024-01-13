@@ -1,6 +1,7 @@
 <script setup>
 import OpenReview from "@/components/Critics/OpenReview.vue";
 import OtherPapers from "@/components/Critics/OtherPapers.vue";
+import Twitter from "@/components/Critics/Twitter.vue";
 </script>
 <template>
   <div>
@@ -30,6 +31,12 @@ import OtherPapers from "@/components/Critics/OtherPapers.vue";
       </div>
       <div class="twitter">
         <h1>Twitter</h1>
+        <Twitter
+          :username="'hello'"
+          :views="'9'"
+          :text="'yay this is great'"
+          :url="'asdf.com'"
+          />
       </div>
       <div class="other-papers">
         <h1>Other papers</h1>
