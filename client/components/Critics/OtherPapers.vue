@@ -1,8 +1,8 @@
 <template>
   <div class="container" v-on:click="goToArticle">
     <div class="text">
-      <h1 class="name">{{ paperTitle }}</h1>
-      <p>{{ text }}</p>
+      <h1 class="nameOtherPapers">{{ paperTitle }}</h1>
+      <p class="textOtherPapers">{{ text }}</p>
     </div>
   </div>
 </template>
@@ -41,7 +41,19 @@ export default {
   height: 20px;
   border-radius: 100%;
 }
-.name {
+.nameOtherPapers {
   margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Number of lines you want to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.textOtherPapers {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Number of lines you want to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>

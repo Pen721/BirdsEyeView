@@ -69,6 +69,7 @@ import Twitter from "@/components/Critics/Twitter.vue";
   max-width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
 }
 .open-review {
   overflow-y: auto;
