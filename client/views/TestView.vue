@@ -2,9 +2,15 @@
 import OpenReview from "@/components/Critics/OpenReview.vue";
 import OtherPapers from "@/components/Critics/OtherPapers.vue";
 import Twitter from "@/components/Critics/Twitter.vue";
+import Abstract from "@/components/Critics/Abstract.vue";
 </script>
 <template>
   <div>
+  <Abstract
+    :title="'Jensen Huang'"
+    :abstract="'idk bruh'"
+  />
+
     <div class="critic-container">
       <div class="open-review">
         <h1>Open review</h1>
