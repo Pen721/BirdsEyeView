@@ -3,7 +3,7 @@
     <p class="score">{{ reviewScore }}</p>
     <div class="text">
       <h1 class="name">{{ reviewerName }}</h1>
-      <p>{{ text }}</p>
+      <p class="text">{{ text }}</p>
     </div>
   </div>
 </template>
@@ -45,5 +45,15 @@ export default {
 }
 .name {
   margin: 0;
+  overflow: ellipses;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Number of lines you want to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>
