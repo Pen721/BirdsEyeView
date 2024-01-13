@@ -28,7 +28,7 @@ onBeforeMount(async () => {
       <div class="title">
         <img src="@/assets/images/logo.png" />
         <RouterLink :to="{ name: 'Home' }">
-          <h1>Racoon</h1>
+          <h1>Raccoon</h1>
         </RouterLink>
       </div>
       <ul>
