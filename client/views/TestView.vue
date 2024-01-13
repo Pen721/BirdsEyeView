@@ -31,12 +31,7 @@ import Twitter from "@/components/Critics/Twitter.vue";
       </div>
       <div class="twitter">
         <h1>Twitter</h1>
-        <Twitter
-          :username="'hello'"
-          :views="'9'"
-          :text="'yay this is great'"
-          :url="'asdf.com'"
-          />
+        <Twitter :username="'hello'" :views="'9'" :text="'yay this is great'" :url="'asdf.com'" />
       </div>
       <div class="other-papers">
         <h1>Other papers</h1>

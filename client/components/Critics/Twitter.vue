@@ -1,22 +1,20 @@
 <template>
   <div class="container">
     <h1>{{ username }}</h1>
-    <h1>{{ views}}</h1>
+    <h1>{{ views }}</h1>
     <span>{{ text }}</span>
     <span>{{ url }}</span>
   </div>
 </template>
 
-
 <script>
 export default {
   props: {
-	username: String,
-	views: Integer,
-	text: String,
-	url: String,
-}
-,
+    username: String,
+    views: Number,
+    text: String,
+    url: String,
+  },
   methods: {
     goToArticle() {
       window.location = this.url;
