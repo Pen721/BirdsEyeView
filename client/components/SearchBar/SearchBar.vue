@@ -11,7 +11,9 @@ import SearchResult from "./SearchResult.vue";
       </button>
     </div>
 
-    <SearchResult v-for="item in items" :key="item.id" :title="item.title" :year="item.authorsYear" />
+    <div class="results">
+      <SearchResult v-for="item in items" :key="item.id" :title="item.title" :year="item.authorsYear" />
+    </div>
   </div>
 </template>
 
@@ -99,5 +101,10 @@ img {
 }
 button {
   padding: 50px;
+}
+.results {
+  max-height: 75vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 </style>

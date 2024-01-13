@@ -47,7 +47,7 @@ onBeforeMount(async () => {
     </article>
   </header>
   <RouterView />
-<img src="@/assets/images/gradient.png" style="width: 100%; height: 25%; position: absolute; bottom: 0;" />
+  <img src="@/assets/images/gradient.png" style="width: 100%; height: 25%; position: absolute; bottom: 0" />
 </template>
 
 <style scoped>
@@ -75,6 +75,7 @@ h1 {
 
 img {
   height: 2em;
+  z-index: -99999;
 }
 
 a {
