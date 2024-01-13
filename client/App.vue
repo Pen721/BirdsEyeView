@@ -47,6 +47,7 @@ onBeforeMount(async () => {
     </article>
   </header>
   <RouterView />
+<img src="@/assets/images/gradient.png" style="width: 100%; height: 25%; position: absolute; bottom: 0;" />
 </template>
 
 <style scoped>
@@ -54,12 +55,14 @@ onBeforeMount(async () => {
 
 nav {
   padding: 1em 2em;
-  background-color: lightgray;
   display: flex;
   align-items: center;
 }
 
 h1 {
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 200;
+  font-style: normal;
   font-size: 2em;
   margin: 0;
 }
@@ -75,7 +78,9 @@ img {
 }
 
 a {
-  font-size: large;
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 20;
+  font-style: normal;
   color: black;
   text-decoration: none;
 }
