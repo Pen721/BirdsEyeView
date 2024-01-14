@@ -117,7 +117,7 @@ const paper2 = {
     paper_id: "",
     paper_title: "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
     summary:
-      "Mixed Recognition and Skepticism: Academic reviewers acknowledge the improvement of Chain of Thoughts (CoT) by Tree of Thoughts (ToT). Criticism on the limited scope and lack of novelty in the approach. Efficiency Concerns: Raised concerns about the cost implications of multiple GPT-4 queries. Suggestions for more comprehensive evaluations and efficiency comparisons. Community Sentiment: Interest in the paper's ideas, with discussions on Twitter. Questions about its impact and application on established benchmarks.",
+      "The academic reviewers acknowledge the improvement of Chain of Thoughts (CoT) by Tree of Thoughts (ToT) but express concerns about the limited scope and lack of novelty in the approach. They highlight the similarity of ToT to existing methods like beam search and suggest more principled methods for guiding the search. Efficiency concerns are raised regarding the cost implications of multiple GPT-4 queries, with a call for clearer comparisons and proposals to reduce inference costs. Community sentiment on Twitter shows interest in the paper's ideas, with discussions on its impact and questions about its application on established benchmarks.",
     paper_url: "https://arxiv.org/abs/2305.10601",
     code_url: "https://github.com/princeton-nlp/tree-of-thought-llm",
     semantic_scholar_url: "https://www.semanticscholar.org/paper/Tree-of-Thoughts%3A-Deliberate-Problem-Solving-with-Yao-Yu/2f3822eb380b5e753a6d579f31dfc3ec4c4a0820",
