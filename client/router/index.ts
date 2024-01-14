@@ -36,7 +36,7 @@ const jsonData = {
       url: "https://arxiv.org/abs/2307.16789",
     },
   ],
-  paper_id: "258762525",
+  paper_id: "2f3822eb380b5e753a6d579f31dfc3ec4c4a0820",
   paper_title: "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
   summary: "TODO",
   paper_url: "https://arxiv.org/abs/2305.10601",
@@ -75,7 +75,7 @@ const router = createRouter({
       path: "/test",
       name: "Test",
       component: TestView,
-      props: { peer_reviews: jsonData.peer_reviews },
+      props: { peer_reviews: jsonData.peer_reviews, tweets: jsonData.tweets, references: jsonData.references },
       meta: { requiresAuth: false },
     },
     {

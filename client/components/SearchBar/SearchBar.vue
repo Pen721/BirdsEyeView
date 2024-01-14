@@ -35,6 +35,7 @@ export default {
             console.log("response not ok");
           }
           let body = await response.json();
+          console.log(body);
           this.items = body.matches;
         } catch (error) {
           console.log("received an error of", error);

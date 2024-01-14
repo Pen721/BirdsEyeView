@@ -6,10 +6,7 @@ import Abstract from "@/components/Critics/Abstract.vue";
 </script>
 <template>
   <div>
-  <Abstract
-    :title="'Jensen Huang'"
-    :abstract="'idk bruh'"
-  />
+    <Abstract :title="'Jensen Huang'" :abstract="'idk bruh'" />
 
     <div class="critic-container">
       <div class="open-review">
@@ -20,25 +17,11 @@ import Abstract from "@/components/Critics/Abstract.vue";
       </div>
       <div class="twitter">
         <h1>Twitter</h1>
-        <Twitter :username="'hello'" :views="'9'" :text="'yay this is great'" :url="'asdf.com'" />
+        <Twitter v-for="tweet in tweets" :key="tweet.url" :username="tweet.username" :views="tweet.view_count_str" :text="tweet.text" :ur="tweet.url" />
       </div>
       <div class="other-papers">
         <h1>Other papers</h1>
-        <OtherPapers
-          :paperTitle="'Attention is all you need and this is extra long form just to drive home a point of trimming'"
-          :text="'This is the abstract of the paper that will need to be cut off at some point This is the abstract of the paper that will need to be cut off at some point This is the abstract of the paper that will need to be cut off at some point'"
-          :url="'https://arxiv.org/pdf/1706.03762.pdf'"
-        />
-        <OtherPapers
-          :paperTitle="'Attention is all you need and this is extra long form just to drive home a point of trimming'"
-          :text="'This is the abstract of the paper that will need to be cut off at some point This is the abstract of the paper that will need to be cut off at some point This is the abstract of the paper that will need to be cut off at some point'"
-          :url="'https://arxiv.org/pdf/1706.03762.pdf'"
-        />
-        <OtherPapers
-          :paperTitle="'Attention is all you need and this is extra long form just to drive home a point of trimming'"
-          :text="'This is the abstract of the paper that will need to be cut off at some point This is the abstract of the paper that will need to be cut off at some point This is the abstract of the paper that will need to be cut off at some point'"
-          :url="'https://arxiv.org/pdf/1706.03762.pdf'"
-        />
+        <OtherPapers v-for="reference in references" :key="reference.url" :paperTitle="reference.paper_title" :text="reference.text" :url="reference.url" />
       </div>
     </div>
   </div>

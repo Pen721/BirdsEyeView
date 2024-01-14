@@ -1,85 +1,23 @@
-<script setup lang="ts">
-// import { storeToRefs } from "pinia";
+<script setup>
+import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
-// import { fetchy } from "../../utils/fetchy";
+import data from "./data.js";
+import TestView from "../../views/TestView.vue";
 
 const route = useRoute();
 const paperId = route.params.id;
+const paperData = ref({}); // Initialize with an empty object
 
-// const props = defineProps(["post"]);
-// const emit = defineEmits(["editPost", "refreshPosts"]);
-// const { currentUsername } = storeToRefs(useUserStore());
-
-// const getPaperDetails = async () => {
-//   try {
-//     x = await fetchy(`api/papers/${}`, "GET");
-
-//   } catch {
-//     return;
-//   }
-// };
-// const deletePost = async () => {
-//   try {
-//     await fetchy(`api/posts/${props.post._id}`, "DELETE");
-//   } catch {
-//     return;
-//   }
-//   emit("refreshPosts");
-// };
+onMounted(() => {
+  paperData.value = data[paperId] || {};
+});
 </script>
 
 <template>
-  {{ paperId }}
+  <div v-if="paperData.value.peer_reviews || paperData.value.tweets || paperData.value.references">
+    <TestView :peer_reviews="paperData.value.peer_reviews" :tweets="paperData.value.tweets" :references="paperData.value.references" />
+  </div>
+  <div v-else>Loading...</div>
 </template>
 
-<!-- <template>
-  <p class="author">{{ props.post.author }}</p>
-  <p>{{ props.post.content }}</p>
-  <div class="base">
-    <menu v-if="props.post.author == currentUsername">
-      <li><button class="btn-small pure-button" @click="emit('editPost', props.post._id)">Edit</button></li>
-      <li><button class="button-error btn-small pure-button" @click="deletePost">Delete</button></li>
-    </menu>
-    <article class="timestamp">
-      <p v-if="props.post.dateCreated !== props.post.dateUpdated">Edited on: {{ formatDate(props.post.dateUpdated) }}</p>
-      <p v-else>Created on: {{ formatDate(props.post.dateCreated) }}</p>
-    </article>
-  </div>
-</template> -->
-
-<style scoped>
-/* p {
-  margin: 0em;
-}
-
-.author {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-menu {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
-  padding: 0;
-  margin: 0;
-}
-
-.timestamp {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 0.9em;
-  font-style: italic;
-}
-
-.base {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.base article:only-child {
-  margin-left: auto;
-} */
-</style>
+<style scoped></style>
