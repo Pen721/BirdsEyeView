@@ -6,7 +6,7 @@ import Abstract from "@/components/Critics/Abstract.vue";
 </script>
 <template>
   <div>
-    <Abstract :title="'Jensen Huang'" :abstract="'idk bruh'" />
+    <Abstract :paper_title="paper_title" :summary="summary" :paper_url="paper_url" :code_url="code_url" :semantic_scholar_url="semantic_scholar_url" :connected_papers_url="connected_papers_url" />
 
     <div class="critic-container">
       <div class="open-review">
@@ -32,9 +32,15 @@ export default {
     peer_reviews: Array,
     tweets: Array,
     references: Array,
+    paper_title: String,
+    summary: String,
+    paper_url: String,
+    code_url: String,
+    semantic_scholar_url: String,
+    connected_papers_url: String,
   },
   mounted() {
-    console.log(this.peer_reviews);
+    console.log(this.paper_title);
     console.log(this.tweets);
     console.log(this.references);
   },
@@ -53,6 +59,15 @@ export default {
   grid-auto-rows: 1fr;
 }
 .open-review {
+  max-height: 60vh;
   overflow-y: auto;
+}
+.twitter {
+  overflow-y: auto;
+  max-height: 60vh;
+}
+.other-papers {
+  overflow-y: auto;
+  max-height: 60vh;
 }
 </style>

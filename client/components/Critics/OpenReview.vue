@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     goToArticle() {
-      window.location = this.url;
+      window.open(this.url);
     },
   },
 };
@@ -28,11 +28,11 @@ export default {
   margin: 0 auto;
   width: 80%;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 5px;
   cursor: pointer;
   padding: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .score {
   position: absolute;
@@ -51,7 +51,7 @@ export default {
 }
 .text {
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Number of lines you want to display */
+  -webkit-line-clamp: 10; /* Number of lines you want to display */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
